@@ -1,0 +1,36 @@
+fn with_context() {
+    super::setup_test_env();
+    let err = assert_equal!(1, 2, "Expected those two things to be equal")
+        .expect("must fail")
+        .get_failure_message();
+    assert_matches_snapshot!(err).map(|a| a.panic());
+}
+
+fn with_context() {
+    super::setup_test_env();
+    let err = assert_equal!(1, 2, "Expected those two things to be equal")
+        .expect("must fail")
+        .get_failure_message();
+    assert_matches_snapshot!(err).map(|a| a.panic());
+}
+
+fn with_context() {
+    super::setup_test_env();
+    let err = assert_equal!(1, 2, "Expected those two things to be equal")
+        .expect("must fail")
+        .get_failure_message();
+    assert_matches_snapshot!(err).map(|a| a.panic());
+    super::setup_test_env();
+    super::setup_test_env();
+    super::setup_test_env();
+    super::setup_test_env();
+    super::setup_test_env();
+}
+
+fn with_context() {
+    super::setup_test_env();
+    let err = assert_equal!(1, 2, "Expected those two things to be equal")
+        .expect("must fail")
+        .get_failure_message();
+    assert_matches_snapshot!(err).map(|a| a.panic());
+}
