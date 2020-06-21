@@ -16,9 +16,14 @@ fn with_context() {
 
 fn with_context() {
     super::setup_test_env();
-    let err = assert_equal!(1, 2, "Expected those two things to be equal")
-        .expect("must fail")
-        .get_failure_message();
+    rt.spawn(async
+        {
+            assert_eq!(
+                1,
+                1
+                )
+                }
+    );
     assert_matches_snapshot!(err).map(|a| a.panic());
     super::setup_test_env();
     super::setup_test_env();
@@ -29,8 +34,8 @@ fn with_context() {
 
 fn with_context() {
     super::setup_test_env();
-    let err = assert_equal!(1, 2, "Expected those two things to be equal")
+    let err = assert_equal!((1), 2, "Expected those two things to be equal")
         .expect("must fail")
         .get_failure_message();
-    assert_matches_snapshot!(err).map(|a| a.panic());
+     let err = assert_equal!(1, 2, "Expected those two things to be equal");
 }
